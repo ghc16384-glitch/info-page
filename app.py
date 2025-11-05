@@ -166,7 +166,7 @@ if send and user_input.strip():
         except Exception as e:
             st.warning(f"CSV 저장 실패: {e}")
 
-    st.experimental_rerun()
+    st.rerun()
 
 if download_log:
     rows = [[st.session_state["session_id"], m["role"], m["text"], m.get("time","")] for m in st.session_state["messages"]]
