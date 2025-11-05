@@ -140,7 +140,7 @@ if reset_conv:
     st.session_state["messages"] = [m for m in st.session_state["messages"] if m["role"]=="system"]
     st.session_state["conversation_start"] = datetime.utcnow().isoformat()
     st.success("대화를 초기화했습니다.")
-    st.experimental_rerun()
+    st.rerun()
 
 if send and user_input.strip():
     save_message("user", user_input.strip())
